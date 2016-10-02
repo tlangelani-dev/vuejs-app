@@ -1,0 +1,13 @@
+#example2 span {
+    display: block;
+    color: red;
+}
+#example2 textarea {
+    width: 500px;
+    height: 150px;
+    display: block;
+    padding: 10px;
+}
+#example2 button {
+    margin: 10px 0;
+}

@@ -2,26 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vuejs App</title>
+    <title>Vuejs | Example 2</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="node_modules/vue/dist/vue.js"></script>
 </head>
 <body>
-    <div  id="example1" class="container">
-
-        <p><input type="text" v-model="message"></p>
-        <p>{{ message }}</p>
-
-        <ul>
-            <li v-for="language in languages">{{language}}</li>
-        </ul>
-
-        <button class="btn" v-on:click="btnClick">Click Me!!!</button>
-
+    <div id="example2" class="container">
 
         <!-- debug your data object -->
         <pre>{{ $data | json }}</pre>
+
+        <h4>Example 2</h4>
+        <form>
+            <span class="error" v-show="!message">Your must enter a message</span>
+            <textarea v-model="message"></textarea>
+            <button v-show="message" type="submit">Submit Message</button>
+        </form>
 
     </div>
     <script src="js/script.js"></script>
