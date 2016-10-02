@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vuejs | Example 4</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" class="container">
+
+        <!-- debug your data object -->
+        <pre>{{ $data | json }}</pre>
+
+        <h4>Example 4</h4>
+
+        <button type="submit" @click="updateCounter">
+            Increment Counter: {{counter}}
+        </button>
+
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                'counter': 0
+            },
+            methods: {
+                updateCounter: function() {
+                    this.counter++;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

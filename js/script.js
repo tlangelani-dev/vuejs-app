@@ -11,9 +11,12 @@ new Vue({
     }
 });
 
+// example 2
 new Vue({
     el: '#example2',
     data: {
         'message': ''
     }
 });
+
+// example 3
