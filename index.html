@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vuejs App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <p><input type="text" v-model="message"></p>
+        <p>{{ message }}</p>
+
+        <ul>
+            <li v-for="language in languages">{{language}}</li>
+        </ul>
+
+        <button class="btn" v-on:click="btnClick">Click Me!!!</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#wrapper',
+            data: {
+                'message': 'Welcome to Vuejs',
+                'languages': ['HTML', 'CSS', 'jQuery', 'PHP']
+            },
+            methods: {
+                btnClick: function() {
+                    alert('You clicked me dude!!!');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
